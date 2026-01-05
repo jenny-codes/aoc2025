@@ -1,0 +1,6 @@
+--dir
+.
+--ignore=/tmp/
+--ignore=/vendor/bundle
+--ignore=sorbet/rbi/gems/
+--enable-experimental-rbs-comments
