@@ -8,7 +8,6 @@ token =
   if File.exist?(token_file)
     File.read(token_file).strip
   else
-    binding.irb
     print "Session token not found. Enter session token: "
     input = STDIN.gets.chomp
     File.write!(token_file, input)
@@ -16,9 +15,8 @@ token =
   end
 
 template = <<~TEMPLATE
+  # typed: true
   # frozen_string_literal: true
-
-  require "./solution.rb"
 
   class DAY < Solution
     def part_one

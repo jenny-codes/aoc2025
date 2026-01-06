@@ -4,6 +4,7 @@
 
 require "irb"
 require "irb/completion"
+require "./solution"
 
 Dir["./day*.rb"].each { |file| require file }
 
