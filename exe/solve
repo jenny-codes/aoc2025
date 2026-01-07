@@ -11,7 +11,7 @@ require "./solution"
 require "./#{day}"
 
 benchmark = Benchmark.realtime do
-  input = File.readlines("data/#{day}.txt").map(&:strip)
+  input = File.readlines("data/#{day}.txt").map(&:chomp)
   solution = Solution.for(day, input)
 
   puts("Solution for #{day}")
